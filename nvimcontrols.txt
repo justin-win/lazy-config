@@ -1,0 +1,488 @@
+NEOVIM CONTROLS CUSTOM
+
+**CHANGES
+    - Migrated from Packer to Lazy
+
+In terminal, cd to directory, type "nvim ." to open directory listing: Type % to create a file or d to create a new directory
+***Lazy
+:Lazy - Opens up plugin manager
+
+
+***OBSIDIAN
+"<leader>oc" - Checkbox
+"<leader>ot" - Template
+"<leader>oo" - Open in Obsidian App
+"<leader>ob" - Show Backlinks
+"<leader>ol" - Show links
+"<leader>on" - Create new note
+"<leader>os" - Search obsidian
+"<leader>oq" - Quick switch
+"<leader>ow" - Swap workspaces
+"<leader>oa" - TOC
+"<leader>op" - Paste image
+<CR> on links to jump to them
+<CR> to check box
+:ObsidianTags [TAG ...] - Searches for tags
+:ObsidianExtractNote [TITLE] - Extracts visually selected item into new note of TITLE
+
+***OBSIDIAN BRIDGE
+NOT IN USE BECAUSE BUGGY MESS RN
+<leader>og - Open graph
+
+***fzf
+$ <C-t> - fuzzy find files and subdirectories  of the working directory
+$ <A-c> - fuzzy find subdirectories and cd into it
+$ <C-r> - fuzzy through shell history
+$ (command) **<tab> -   fuzzy completion
+    works for: export, unset, unalias, ssh, telnet, kill
+
+
+
+
+***COMMANDS/MODES***
+:Sex! - Open file tree
+esc - exit mode
+R - replace mode
+v - visual mode
+V - visual line mode
+<C-v> - visual block mode
+i - insert mode
+: - command mode
+c - command line editing
+:q - quit
+:w - write
+:wq - write and quit
+:q! - quit w/o saving
+:qa!<Enter> - Exit vim without saving
+/{pattern} - search for string
+   -n/N - jump to next/previous match of search
+?{pattern} - search for pattern vertically
+   - n/N - same thing
+* (use asterisk on continuous word) - searches for continuous word instead of typing in manually
+
+# (word) - essentially ?
+
+***EDITING***
+q (value) i (type anything) q - records whatever you type
+@ (value) - pastes the thing you recorded
+<C-c> - clear (clears command line or clears line)
+{visual mode} y - yank/copy in visual mode
+yy - copy line
+p - paste text last yanked or deleted after cursor
+P - paste text last yankde or deleted before cursor
+a - moves cursor after cursor
+i - inserts before cursor
+I - insert at beginning of current line
+A - insert at end of current line
+o - insert new line below current line
+O - insert new line above current line
+r - replace character under cursor
+R - Enter replace mode
+u - undo
+<C-r> - redo
+x - Delete Character under cursor
+X - Delete character before cursor
+> - Indent current line
+< - Unindent current line
+== - Auto-indent current line
+=% - Auto-indent block
+
+
+
+d <left/right/up/down>- deletes left/right of selected character or deletes entire line and above/below
+dd - Delete current line
+
+s - deletes [count] characers and starts insert
+
+
+***NAVIGATION***
+hjkl - movement
+  - Can type 6k to go up 6 lines, etc
+w - move to beginning of next word
+W - move until whitespace
+b - move to beginning of previous word
+B - move backwards until whitespace
+gg - move to beginning of file
+G - move to end of file
+{number}G - move to specified line number
+:{line number} - move to specified line number
+
+:e {file name} - Open specified file
+:ls - List all open files
+:b {buffer number} - Switch to specified buffer/file
+:bd - Close current buffer
+zz - center cursor
+
+
+***WINDOWS***
+<C-w>w - Jump through windows in cycle
+<C-w> + h/j/k/l - Jump through windows left/below/above/right of current window respectively
+:split - Split window horizontally
+:vsplit - Split window vertically
+:q - Closes current window
+
+
+***TABS***
+:tabnew - Opens new tab
+gt - Move to next tab
+gT - Move to previous tab
+{tab number}gt - Move to specified tab number
+:tabclose - Close current tab
+
+***CUSTOM***
+in file exploring neovim, press <leader>v/s to open up file/location into vertical/horizontal window
+
+"v" gc - Comment out lines
+gcc - comment out single line
+gc #j/k - comment out from cursor to # down/up
+
+"n" <C-p> - While in normal mode, open git files
+<leader>pv - go back
+<leader>pf - project find
+<leader>ps - string find in different files
+<leader>u - undo tree
+<leader>a - add to quick jump files
+<C-e> - open quick jump files
+<leader>h/t/n/w - open 1/2/3/4 quick jump files
+<C-d> - Half page jump down
+<C-u> - Half page jump up
+/<"word"><Enter> then press n/N - Keeps cursor in middle while searching for word
+
+<leader>p - Deletes highlighted word and pastes saved word without losing save
+
+<leader>y + ap- Copy paragraph to system clipboard
+
+<leader>y or Y - Yank and copy to system clipboard
+
+<leader>d - quick delete
+<leader>s - replace all selected word
+<leader>x - turns file to executable
+<leader>vpp - shortcut to neovim config
+<leader>bpp - neovim controls
+<leader>mpp - tmux conf
+<leader>mr - luasnip
+<leader><leader>w - :so or source lua file (for config)
+
+<C-c> basically means <esc>
+
+LSP AUTOCOMPLETE!!!
+<C-y> confirm
+<Up>/<Down> Scroll through autocomplete
+<C-n> Scroll next through and autocomplete
+<C-p> Scroll previous and autocomplete
+
+LSP Definitions
+K - Hover Definitions
+gd - goto original function Definitions
+gi - goto original function implementation
+<F2> - rename function in all files
+gr - find all references of function
+gs - signature help
+gl - diagnostics
+gD - goto declaration
+
+FOR MORE GO TO:
+https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/lsp.md
+
+:lua tokyoNight() - Tokyo Night Scheme
+:lua kana() - kanagawa-wave scheme
+:lua gruvdark() - gruvdark scheme
+:lua cat() - transparent catppuccine scheme
+
+<leader>gs - Git file finder
+
+When highlighting text, press: J or K to move them up/down. Will move into if statement
+
+DOES NOT WORK <C-f> project find
+<leader>k/j - quickfix
+telescope, <C-q> stores into quickfix list
+    <tab> selects choices in telescope -> <C-w> to store selected values to qf list
+
+:cdo s (substitute)/(word to change)/(word we're replacing with) | update
+    -replaces word in quickfix
+
+
+COMMANDS -
+Command, count, motion
+***MOTIONS***
+HORIONTAL
+f (character) - forward to chosen character
+F (character) - backwards to chosen character
+f (character) ,/; - continuously go forward/backwards to chosen character
+t (character) - Up to character
+T (character) - Back to character
+$ - Go to line last character
+_ - Go to line first character
+0 - Go to beginning of line
+
+w - Go word forward
+b - Go word backwards
+e - Go to end of word
+I - Insert at beginning
+A - Insert at end
+O - Newline above insert
+o - newline below insert
+
+<C-o> or <C-i> - Jump to previous/next cursor position
+
+(Insert mode) <C-o> (number amount) (char to insert) <esc> - Insert num amount of char
+
+EDITTING
+vi (/{/b - Select all within () or {}
+va (/{/b - Select all within () or {} including braces
+yi (/{/b - Yank all within () or {} without braces
+ya (/{/b - with braces
+da, ca, so on
+c - delete then enter insert mode
+viw - Select word cursor is on
+yiw - Yank word
+yiW - Yank continuous word
+<leader>p - pastes without losing original paste
+
+command ap - does command to entire continuous lines
+=ap - align whitespace of paragraph
+
+% - Jump from bracket to close bracket
+
+VERTICAL
+<C-v> - Vertical line edit
+{} - Move by paragraph down/up
+[] - Move to end of function down/up
+zz - Centers cursor
+gg - Go to top of file
+G - go to bottom of file
+<C-d> - Half page down
+<C-u> - Half page up
+o (visual mode) - move to beginning / end of visual blocks
+
+<C-v> I (input) <C-c> - Allows multi line editing of inserting input
+<C-a> - increment number
+<C-v> <C-a> - increment vertically and in succession
+	ex:
+	0 -> 1
+	0 -> 2
+	0 -> 3
+
+width: 10
+height: 50
+top: 60
+
+
+
+VIM REGEX
+
+REQUIRES ALL CONTROL CHARACTERS TO BE SEPARATED BY \
+ex: :%s/\d\{4}\s\+/
+        ^ ^   ^ ^
+Vim     Explanation
+-------------------
+x\=     Match 0 or 1 of x
+x\+     Match 1 or more of x
+\(xyz\) Use brackets to group matches
+x\{n,m} Match n to m of x
+x\{-}   Match 0 or 1 of x, non-greedy
+x\{-1,} Match 1 or more of x, non-greedy
+\< \>   Word boundaries
+\n      n is a number; Backreferences for previously grouped matches
+\c      Insensitive match
+\C      Sensitive match
+\?      Character before could or not be behind: \d{5} ([\-]\d{4})?
+            -can be 12345 or 12345-1234
+            12345-1234
+\v      Very magic: Allows regex without \ separation
+\V      Enables regex with \ separation
+--------------------------
+%s - select all file
+\w - word
+\d - digit
+\s - space between words
++ - quantifier: one or more of preceding element
+    -ex: (\w+)
+
+{number} - quantifier: number amount of preceding element
+    -ex: abcdefg -> :s/\([a-z]\{4}\) -> abcd
+
+* - everything after preceding element
+. - wildcard: matches any char except newline
+^ - either beginning of line or not including something
+$ - end of line
+
+[xyz] - character class; matches everything in the class
+\(\) - capture group; text inside is matched and can be referenced later
+    -best to use \(word\) to match for word in capture group
+    -when adding + do \(word\+\): add multiple \
+    -(\d{3}) - captures the first 3 digits
+
+word\(.*\) - select everything after word
+[^xyz] - matches everything excluding xyz
+ex:
+    vim.keymap.set(test(), test())
+    -'<, '>s/^[^(]*/
+        ^ - start at begining of line, can be replaced with choice of match
+        [^(]* - match everything excluding ( onwards
+    select this entire line
+    -:s select.*
+    or
+    -:s select\(.*\)
+
+
+
+
+VIM MULTI LINE PLUGIN
+<C-n> (normal mode) - Select word
+n/N - next/previous occurrence
+[/] - next/previous cursor
+q - skip current and go to next cursor
+Q - remove current cursor
+i, a, I, A - start insert mode
+
+<tab> - Switch between cursor and extend mode
+	-Cursor mode is essentially normal mode
+	-Extend mode is essentially visual mode
+
+
+
+NVIM SURROUND
+ys (motion) (bracket or quotes) - surrounds motion with bracket/quote. EX: hello (ysw") --> "hello"
+ys (motion) (bracket/quote) (b/q) - surrounds motion of previous b/q with current b/q
+	- "hello" (ysa"() --> ("hello")
+(visual mode) (selected word) S (bracket/quotes) - surrounds selected word with b/q
+ds (b/q) - delete surrounding b/q
+cs (old b/q) (new b/q) - replaces old delimiter with new delimiter
+(surround motion)t (delimiter) - surrounds motion with HTML Tags named (delimiter)
+(surround motion)f (delimiter) - surrounds motion with function named (delimiter)
+BEST TO DO AT BEGINNING OF WORD BECAUSE WEIRD IF NOT
+
+NVIM AUTOTAG
+    -type "<word>" and will autotag with closing html "</word>"
+    -ciw"word"<esc> will change the existing tag
+
+NVIM SNIPPETS
+    -in config/nvim/after/.../luasnip.lua
+        -create snipets
+        s is the snippet you want
+        t is text
+        f is function
+        i is insert location
+        rep is repeat
+
+    controls:
+    <C-k> expands
+    <C-l> jump forward to jump point snippet
+    <C-j> jump back
+    <C-e> cycles
+    <leader><leader>s - source luasnip
+watch this for reference
+https://www.youtube.com/watch?v=FmHhonPjvvA
+
+NVIM Snipe
+    <A-b> to toggle buffer selection
+
+NVIM Tabline
+<A-,>/<A-.> - Jump to previous/next tab
+<A-c> - close tab
+<A-1-9> - Jump through 1-9 tabs
+<A-p> - pin/unpin tab
+<A-</>> - Move tab left/right
+<leader>bb - Order tabs by buffer number
+<leader>bd - Order by directory
+<leader>bl - Order by language
+<leader>bw - Order by window number
+
+
+
+TMUX -
+SESSIONS
+in terminal: tmux new -s (session name) - create new session
+$ tmux a - attach to last session
+tmux a -t (name) - attach to session (name)
+<C-b>(/) - Move prev/next session
+<C-b>$ - Rename Session
+<C-a>:kill-session (name) - Kills session (name)
+<C-a>s - opens session manager
+<C-a>d - detach session
+<C-a>| - Split terminal vertically
+<C-a>- - Split horizontally
+<C-a>r - source .tmux.conf file
+WINDOWS
+<C-a>c - Create a window within session
+<C-a>w - Open window manager
+<C-a>n/p OR 0-9 - Jump to next/prev windows OR windows 0-9
+<C-a>, - Rename window
+<C-a>l - Toggle last active window
+<C-a>& - Close window
+PANES
+<C-a> up/down/left/right - Navigate through panes
+	-Use vim plugin <C-h/j/k/l>
+<C-a>h/j/k/l - Resize current panes to left/down/up/right
+<C-a>m - Maximize pane
+<C-a>x - Close pane
+<C-a>; - Toggle last active panel
+<C-a>-/| - Split current pane horizontally/vertically
+<C-a><leader> - Toggle between pane layouts
+<C-a>{/} - Move pane left/right
+COPY MODE
+<C-a>[ - Enter copy mode
+:setw -g mode-keys vi - Use vi motions
+q - quit
+g - goto top line
+G - goto bottom
+h/j/k/l - vi motions
+w/b - move forwards/backwards 1 word at a time
+f/F - search character inline forward/backwards
+/ or ? - search forward/backwards
+	-n/N - next/prev occurrence
+<leader> - Start selection
+<esc> - Clear selection
+<CR> - Copy Selection
+<C-a>] - Paste contents
+V - select line
+
+
+TMUX VIM PLUGIN
+<C-h/j/k/l> - Navigate through panes using vim motions
+
+
+
+i3 CONTROLS
+<super>R - refresh
+<super>f - fullscreen
+<super>0-9 - Jump to different desktops
+<super>d - allows search through applications
+<super>Q - Close application
+<super>E - Exit i3
+$ i3lock - Locks i3 to require password
+<super><CR> - Open terminal
+<super>h - Next app to open will be vertical
+<super>V - Next app to open will be horizontal pane
+<super>j/k/l/; - Navigate through different panes
+<super>s - Stacks panes into stacks
+    -Same motion to jump to different tabs
+<super>e - Set panes/tabs to tiling mode
+<super>w - Set view into tabs
+<super><S-0-9> - Sets current window into desktop space 0-9
+
+RESIZE
+<super>r - Enter resize mode
+    -j/k/l/; - resize current window
+<esc> - Escape resize mode
+<super>J/K/L/: - Moves current window
+
+
+CONFIG FILES LOCATION
+nvim - ~/.config/nvim
+tmux - ~/.tmux.conf
+i3 -
+
+
+
+LINUX BASH CONTROLS
+echo (thing you want in text file) > (file name) - Creates file name with thing you want in it
+touch (file name) - creates empty file of file name or updates timestamp of existing
+cat (file name) - concatenates and displays file contents
+    cat > (new file name) <CR> (Content you wish to put in) <C-d> - creates file with contents
+
+live-server
+    -open directory with webserver
+    -type 'live-server' into terminal
+    -open port onto browser
