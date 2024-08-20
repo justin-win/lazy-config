@@ -5,28 +5,45 @@ return {
 -- or                            , branch = '0.1.x',
   dependencies = { {'nvim-lua/plenary.nvim'} }
 },
-
+--icons
 'kyazdani42/nvim-web-devicons',
 
---colorscheme
+--oil nvim
+{
+  'stevearc/oil.nvim',
+  opts = {},
+  -- Optional dependencies
+  dependencies = { { "echasnovski/mini.icons", opts = {} } },
+  -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+},
 
+--colorscheme
 { "rose-pine/neovim", name = "rose-pine" },
+
  --colorscheme
  'folke/tokyonight.nvim',
+
  --text highlighter
- {'nvim-treesitter/nvim-treesitter'},
+ 'nvim-treesitter/nvim-treesitter',
+
+ --telescope
 "sopa0/telescope-makefile",
+
  --colorscheme
  'rebelot/kanagawa.nvim',
+
  --plugin window viewer
  'nvim-treesitter/playground',
  'theprimeagen/harpoon',
+
  --undotree plugin
  'mbbill/undotree',
+
  --git plugin
  'tpope/vim-fugitive',
- 'williamboman/mason.nvim',
 
+ --lsp
+ 'williamboman/mason.nvim',
  {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v3.x',
@@ -50,7 +67,6 @@ return {
         require('Comment').setup()
     end
  },
---webdev
 --autoclose tags
 'windwp/nvim-ts-autotag',
 --auto pair
@@ -61,10 +77,10 @@ return {
         require("nvim-autopairs").setup {}
     end
 },
+
 --snippets
 "rafamadriz/friendly-snippets",
 --snippet dependency
-
 {
 	"L3MON4D3/LuaSnip",
 	-- follow latest release.
@@ -112,31 +128,9 @@ return {
 --img clip nvim | Used for obsidian
 "HakonHarnes/img-clip.nvim",
 
---obsidian bridge
---synced wikilinks in obsidian
---REST API key stored in ~/.bashrc under OBSIDIAN
--- use  {
---     'oflisback/obsidian-bridge.nvim',
---     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
---     config = function() require('obsidian-bridge').setup(
---         {
---             "oflisback/obsidian-bridge.nvim",
---             dependencies = { "nvim-telescope/telescope.nvim" },
---             config = function() require("obsidian-bridge").setup({
---                 obsidian_server_address = "https://127.0.0.1:27123/",
---                 scroll_sync = true
---             }) end,
---             event = {
---                 "BufReadPre *.md",
---                 "BufNewFile *.md",
---             },
---         }
---     ) end
--- }
-'oflisback/obsidian-bridge.nvim',
-
 --nerdfont
 {'glepnir/nerdicons.nvim', cmd = 'NerdIcons', config = function() require('nerdicons').setup({}) end},
+
 --lualine status line
 {
     'nvim-lualine/lualine.nvim',
@@ -146,10 +140,10 @@ return {
  "ellisonleao/gruvbox.nvim" ,
 { "catppuccin/nvim", as = "catppuccin" },
  "craftzdog/solarized-osaka.nvim" ,
+
 --multi line
  "mg979/vim-visual-multi" ,
 -- surround bracket shortcut
-
 {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features

@@ -63,8 +63,8 @@
 -- })
 
 -- setup must be called before loading
--- vim.cmd.colorscheme "catppuccin-mocha"
-vim.cmd.colorscheme "rose-pine-main"
+vim.cmd.colorscheme "catppuccin-mocha"
+-- vim.cmd.colorscheme "rose-pine-main"
 
 function cat()
     vim.cmd[[colorscheme catppuccin-mocha]]

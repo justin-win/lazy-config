@@ -6,6 +6,8 @@ NEOVIM CONTROLS CUSTOM
 In terminal, cd to directory, type "nvim ." to open directory listing: Type % to create a file or d to create a new directory
 ***Lazy
 :Lazy - Opens up plugin manager
+***Neotree
+<leader>ft - opens file tree
 
 
 ***OBSIDIAN
@@ -174,12 +176,13 @@ LSP AUTOCOMPLETE!!!
 LSP Definitions
 K - Hover Definitions
 gd - goto original function Definitions
-gi - goto original function implementation
+gi - list all implementations in quickfix list
 <F2> - rename function in all files
 gr - find all references of function
 gs - signature help
 gl - diagnostics
 gD - goto declaration
+go - goto symbol's definition
 
 FOR MORE GO TO:
 https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/lsp.md
