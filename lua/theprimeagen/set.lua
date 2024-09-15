@@ -32,3 +32,9 @@ vim.opt.colorcolumn = "80"
 
 --obsidian
 vim.opt.conceallevel = 2;
+
+
+-- sync buffers automatically
+vim.opt.autoread = true
+-- disable neovim generating a swapfile and showing the error
+-- vim.opt.swapfile = false

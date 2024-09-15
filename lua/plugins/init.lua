@@ -173,4 +173,7 @@ return {
   },
   opts = {}
 },
+
+-- indent lines
+{ 'echasnovski/mini.indentscope', version = '*' },
 }

@@ -8,6 +8,10 @@ require("obsidian").setup(
   -- current markdown file being edited.
   workspaces = {
     {
+        name = "study",
+        path = "~/vaults/study"
+    },
+    {
         name = "school",
         path = "~/vaults/school"
     },
