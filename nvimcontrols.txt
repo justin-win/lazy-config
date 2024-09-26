@@ -9,6 +9,38 @@ In terminal, cd to directory, type "nvim ." to open directory listing: Type % to
 ***Neotree
 <leader>ft - opens file tree
 
+*** Leetcode.nvim
+":Leet"	         opens menu dashboard
+":Leet menu"	 same as Leet
+":Leet exit"	 close leetcode.nvim
+":Leet console"	 opens console pop-up for currently opened question
+":Leet info"	 opens a pop-up containing information about the currently opened question
+":Leet tabs"	 opens a picker with all currently opened question tabs
+":Leet yank"	 yanks the current question solution
+":Leet lang"	 opens a picker to change the language of the current question
+":Leet run"	     run currently opened question
+":Leet test"	 same as Leet run
+":Leet submit"	 submit currently opened question
+":Leet random"	 opens a random question
+":Leet daily"	 opens the question of today
+":Leet list"	 opens a problem list picker
+":Leet open"	 opens the current question in a default browser
+":Leet reset"	 reset current question to default code definition
+":Leet last_submit"	 retrieve last submitted code for the current question
+":Leet restore"	 try to restore default question layout
+":Leet inject"	 re-inject code for the current question
+":Leet session"
+        create create a new session
+        change change the current session
+        update update the current session in case it went out of sync
+":Leet desc" toggle question description
+        toggle same as Leet desc
+        stats toggle description stats visibility
+":Leet cookie"
+        update opens a prompt to enter a new cookie
+        delete sign-out
+":Leet cache"
+        update updates cache
 
 ***OBSIDIAN
 "<leader>oc" - Checkbox

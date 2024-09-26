@@ -124,3 +124,15 @@ vim.keymap.set("n", "<leader>oa", "<cmd>ObsidianTOC<CR>", { desc = "Table of Con
 
 --img clip
 vim.keymap.set("n", "<leader>op", "<cmd>PasteImage<CR>", { desc = "Paste image" })
+
+
+-- Leetcode.nvim
+vim.keymap.set("n", "<leader>ll", "<cmd>Leet<CR>", { desc = "Leetcode.nvim" })
+vim.keymap.set("n", "<leader>lr", "<cmd>Leet run<CR>", { desc = "Run code" })
+vim.keymap.set("n", "<leader>ld", "<cmd>Leet desc<CR>", { desc = "Toggle description" })
+vim.keymap.set("n", "<leader>lq", "<cmd>Leet exit<CR>", { desc = "Exit leetcode" })
+vim.keymap.set("n", "<leader>lc", "<cmd>Leet console<CR>", { desc = "Toggle console" })
+vim.keymap.set("n", "<leader>ls", "<cmd>Leet submit<CR>", { desc = "Submit current code" })
+vim.keymap.set("n", "<leader>li", "<cmd>Leet info<CR>", { desc = "Tips" })
+vim.keymap.set("n", "<leader>lp", "<cmd>Leet list<CR>", { desc = "List of problems" })
+vim.keymap.set("n", "<leader>lt", "<cmd>Leet tabs<CR>", { desc = "Tabs" })
