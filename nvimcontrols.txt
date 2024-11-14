@@ -93,6 +93,9 @@ c - command line editing
 ?{pattern} - search for pattern vertically
    - n/N - same thing
 * (use asterisk on continuous word) - searches for continuous word instead of typing in manually
+q: - Opens command history. Good for edditing search and replace
+q/ - Opens search history
+gUU/uu - turn line upper/lowercase
 
 # (word) - essentially ?
 
