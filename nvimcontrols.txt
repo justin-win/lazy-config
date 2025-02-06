@@ -9,6 +9,22 @@ In terminal, cd to directory, type "nvim ." to open directory listing: Type % to
 ***Neotree
 <leader>ft - opens file tree
 
+*** Docker
+Need to use Dockerfile to build
+
+$ docker build [opts (-t to name)] <opt-name> <dockerfile loc> # Builds a docker image with opt-name
+$ docker run <opt-name or image id> <args> # Runs image as a container
+$ docker run -it <opt-name> bash # Allows you to open container in bash
+$ docker exec [opts] <container name> <args> # run commands in active container
+$ docker ps # list out active containers
+$ docker images # list out images
+$ docker kill <container id or name>
+$ docker rmi <image id or name>
+$ docker cp CONTAINER:PATH LOCAL_PATH # Copy from container to local
+$ docker cp LOCAL_PATH CONTAINER:PATH # Copy from local to container
+
+Can match with Makefile to enable consistent development environment
+
 *** Leetcode.nvim
 ":Leet"	         opens menu dashboard
 ":Leet menu"	 same as Leet

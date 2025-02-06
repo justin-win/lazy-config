@@ -18,22 +18,13 @@ local d = ls.dynamic_node
 local r = ls.restore_node
 
 
-ls.add_snippets("java", {
-    --creating class
-    s("class", fmt([[
-    class {} {{
-        {}
-    }}
-    ]],
-    {
-        i(1, "ClassName"),
-        i(2, "/* Code Goes Here */")
-    })),
+ls.add_snippets("c", {
     --function
         s("fn", fmt(
     [[
     /**
     {}
+     * @function
      *
      * @return {}
      */
