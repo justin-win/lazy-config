@@ -7,27 +7,27 @@ require("obsidian").setup(
   -- the workspace to the first workspace in the list whose `path` is a parent of the
   -- current markdown file being edited.
   workspaces = {
-    {
-        name = "study",
-        path = "~/vaults/study"
-    },
+    -- {
+    --     name = "study",
+    --     path = "~/vaults/study"
+    -- },
     {
         name = "school",
-        path = "~/vaults/school"
+        path = "/mnt/c/Users/merch/OneDrive/Desktop/vault/school"
     },
-    {
-      name = "personal",
-      path = "~/vaults/personal",
-    },
-    {
-      name = "work",
-      path = "~/vaults/work",
-      -- Optional, override certain settings.
-      overrides = {
-        notes_subdir = "notes",
-        subdir = "templates"
-      },
-    },
+    -- {
+    --   name = "personal",
+    --   path = "~/vaults/personal",
+    -- },
+    -- {
+    --   name = "work",
+    --   path = "~/vaults/work",
+    --   -- Optional, override certain settings.
+    --   overrides = {
+    --     notes_subdir = "notes",
+    --     subdir = "templates"
+    --   },
+    -- },
   },
 
   -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of

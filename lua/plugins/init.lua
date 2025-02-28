@@ -111,13 +111,17 @@ return {
   },
   opts = {
     workspaces = {
+      -- {
+      --   name = "personal",
+      --   path = "~/vaults/personal",
+      -- },
+      -- {
+      --   name = "work",
+      --   path = "~/vaults/work",
+      -- },
       {
-        name = "personal",
-        path = "~/vaults/personal",
-      },
-      {
-        name = "work",
-        path = "~/vaults/work",
+        name = "school",
+        path = "/mnt/c/Users/merch/OneDrive/Desktop/vault/school",
       },
     },
 
