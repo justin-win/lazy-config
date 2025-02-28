@@ -24,8 +24,8 @@ $ docker cp CONTAINER:PATH LOCAL_PATH # Copy from container to local
 $ docker cp LOCAL_PATH CONTAINER:PATH # Copy from local to container
 
 *** Devcontainer
-$ devcontainer build --workspace-folder <path to devcontainer.json> # Be in directory you want it in
-$ devcontainer up --workspace-folder <in directory you built>
+$ devcontainer build --workspace-folder <path to devcontainer.json> # Be in directory you want it in to build an image
+$ devcontainer up --workspace-folder <in directory you built> # Inside the directory you built, creates the container
 $ devcontainer exec --workspace-folder <in directory you built> <args>
     - e.g. devcontainer exec --workspace-folder . bash
 
