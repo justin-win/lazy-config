@@ -23,6 +23,13 @@ $ docker rmi <image id or name>
 $ docker cp CONTAINER:PATH LOCAL_PATH # Copy from container to local
 $ docker cp LOCAL_PATH CONTAINER:PATH # Copy from local to container
 
+*** Devcontainer
+$ devcontainer build --workspace-folder <path to devcontainer.json> # Be in directory you want it in
+$ devcontainer up --workspace-folder <in directory you built>
+$ devcontainer exec --workspace-folder <in directory you built> <args>
+    - e.g. devcontainer exec --workspace-folder . bash
+
+
 Can match with Makefile to enable consistent development environment
 
 *** Leetcode.nvim
