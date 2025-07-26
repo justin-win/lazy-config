@@ -1,5 +1,10 @@
 NEOVIM CONTROLS CUSTOM
 
+** LSP
+- If LSP is not working, check lsp.log
+    - Ensure that .local/state/nvim/mason/<lsp> is using the correct file
+        - Said file is usually in the .local/state/nvim/mason/package directory
+
 **CHANGES
     - Migrated from Packer to Lazy
 
